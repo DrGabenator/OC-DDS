@@ -168,9 +168,36 @@ def reverterPalavra():
     palavraDigitada[::-1]
     print(f"O inverso da palavra {palavraDigitada} é: {palavraDigitada[::-1]}")
 #5-	Peça um número ao usuário e diga se ele é múltiplo de 3.
+def multiploDeTres():
+    numeroDigitado = int(input("Digite um número: "))
+    if(numeroDigitado % 3 == 0):
+        print(f"O número {numeroDigitado} é múltiplo de 3.")
+    else:
+        print(f"O número {numeroDigitado} não é múltiplo de 3.")
 #6-	Peça ao usuário para digitar 3 nomes e mostre todos 
 # eles em ordem alfabética.
+def nomesOrdemAlfabetica():
+    listaNomes = []
+    contador = 1
 
+    while contador <= 3:
+        nomeDigitado = input(f"Digite o {contador}° nome: ")
+        listaNomes.append(nomeDigitado)
+        contador += 1
+    
+    listaNomes.sort(reverse=False)
+
+    print(f"Os nomes digitados em ordem alfabética são:", *listaNomes)
 #DESAFIO
 #Peça ao usuário para digitar 4 números 
 # e mostre qual é o maior e qual é o menor.
+def desafio():
+    listaDeNumeros = []
+    contador = 1
+
+    while contador <= 4:
+        numeroDigitado = int(input(f"Digite o {contador}° número: "))
+        listaDeNumeros.append(numeroDigitado)
+        contador += 1
+
+    print(f"O menor número digitado foi: {min(listaDeNumeros)}\nO maior número digitado foi: {max(listaDeNumeros)}")
